@@ -1,1 +1,47 @@
+puts "bem vindo a o jogo da adivinhação"
+	puts " qual e o seu nome ?"
+	nome = gets
+	puts "\n\n"
+	puts "Bem vindo a o jogo " + nome 
 
+end
+
+incio_do_jogo
+
+
+    puts "\n"
+	puts " estou escolhendo o numero secreto de 0 a 10"
+	numero_secreto = 8
+	puts " numero secreto escolhido, que tal acertar o numero de hoje ? "
+
+	
+
+limite_de_tentativas = 3
+
+for tentativa in 1 ..limite_de_tentativas
+	puts "\n\n\n"
+	puts "tentativa " + tentativa.to_s + " de " + limite_de_tentativas.to_s
+	puts "escolha um numero "
+	chute = gets 
+	puts " sera que voce acertou ? voce chutou " + chute 
+
+	acertou = numero_secreto == chute.to_i
+
+
+	if acertou 
+		puts "voce acertou"
+		break 
+	else 
+		maior = numero_secreto > chute.to_i
+		if maior 
+			puts " numero secreto e maior"
+		else 
+			puts " numero secreto e menor"
+		end
+	end
+end
+
+
+
+#testando a nova branch 
+#ainda não foi 
